@@ -1,5 +1,5 @@
 
-package com.assignment.model;
+package com.assignment.androidproject.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
