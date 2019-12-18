@@ -57,8 +57,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         String imageUrl = singleResponseModelsInfo.getImageHref();
         Log.e("imageUrl", imageUrl);
         Picasso.with(context)
-                .load("http://i.imgur.com/DvpvklR.png")
+                .load(imageUrl)
                 .placeholder(R.drawable.ic_launcher_background)
+                .error(R.drawable.ic_launcher_background)
                 .into(holder.profile_icon);
 
     }
