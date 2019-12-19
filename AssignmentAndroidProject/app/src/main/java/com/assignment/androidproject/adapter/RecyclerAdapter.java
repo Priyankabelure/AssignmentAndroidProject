@@ -66,13 +66,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         {
             holder.txt_description.setVisibility(View.GONE);
         }
+
+
         holder.txt_description.setText(singleResponseModelsInfo.getDescription());
         String imageUrl = singleResponseModelsInfo.getImageHref();
-
-
-
-
-
+        if(imageUrl==null)
+        {
+            holder.profile_icon.setVisibility(View.GONE);
+        }
         if((singleResponseModelsInfo.getDescription()!=null)  ) {
 
             final ViewTreeObserver vto = holder.profile_icon.getViewTreeObserver();
