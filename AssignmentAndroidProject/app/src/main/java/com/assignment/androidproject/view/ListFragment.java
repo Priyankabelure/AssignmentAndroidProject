@@ -118,6 +118,7 @@ public class ListFragment extends BaseFragment implements SwipeRefreshLayout.OnR
 
                     if (responseList.size() > 0) {
                         recyclerAdapter.refreshRecyclerView(responseList);
+                        swipeRefreshLayout.setRefreshing(false);
                     } else {
                         // TODO Show Empty List Error on UI
                     }
